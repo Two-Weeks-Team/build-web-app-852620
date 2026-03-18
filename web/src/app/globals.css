@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 36 33% 10%;
+  --foreground: 45 25% 90%;
+  --card: 34 26% 14%;
+  --muted: 32 18% 20%;
+  --muted-foreground: 38 15% 72%;
+  --border: 32 20% 28%;
+  --primary: 142 31% 42%;
+  --primary-foreground: 0 0% 100%;
+  --accent: 38 54% 52%;
+  --accent-foreground: 30 30% 12%;
+  --success: 142 40% 58%;
+  --warning: 38 75% 62%;
+  --destructive: 4 70% 58%;
+  --radius: 14px;
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-pin: 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+
+* { border-color: hsl(var(--border)); }
+
+body {
+  font-family: var(--font-body), ui-sans-serif;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(120, 180, 140, 0.16), transparent 35%),
+    radial-gradient(circle at 80% 20%, rgba(198, 161, 92, 0.14), transparent 30%),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.035) 0px,
+      rgba(255,255,255,0.035) 1px,
+      transparent 1px,
+      transparent 34px
+    ),
+    hsl(var(--background));
+}
+
+h1, h2, h3 { font-family: var(--font-display), serif; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
